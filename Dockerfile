@@ -1,8 +1,11 @@
 # FROM metabase/metabase:v0.63.13
-FROM metabase/metabase:v0.58.21
+# FROM metabase/metabase:v0.58.21
 
-EXPOSE 3000
+# EXPOSE 3000
 
-ENV MB_DB_TYPE=postgres
-ENV PORT=3000
-ENV MB_JETTY_PORT=3000
+# ENV MB_DB_TYPE=postgres
+# ENV PORT=3000
+# ENV MB_JETTY_PORT=3000
+FROM metabase/metabase:v0.63.13
+
+CMD ["migrate down"]
